@@ -294,7 +294,7 @@ M.qtype_canvas.init = function (Y) {
 					getById(this.strAnswer).value += t + x + "," + y;
 					ctx.fillCircle(x, y, ctx.radius, fillColor);
 				};
-				if(!flgReview && !flgPreviewReview){
+				if(!flgReview && !flgPreviewReview && this.strClass != "correct" && this.strClass != "incorrect"){
 					canvas.node.onmousedown = function(e) {canvas.isDrawing = true;};
 					canvas.node.onmouseup   = function(e) {canvas.isDrawing = false;};
 					canvas.node.onmouseout  = canvas.node.onmouseup;
